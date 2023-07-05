@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Header from '../components/Header';
-// import { poppins } from "../utils/font";
+import Image from 'next/image'
+
+
 
 
 export default function Home() {
@@ -13,6 +15,7 @@ export default function Home() {
 
       </Head>
       <Header />
+
 
 
     </>

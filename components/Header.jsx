@@ -1,4 +1,8 @@
 import React from 'react'
+import Image from 'next/image'
+import { logos } from '../utils/images.json'
+
+
 
 const Header = () => {
     return (
@@ -8,8 +12,8 @@ const Header = () => {
                         <div className="col-lg-12">
                             <nav className="navbar navbar-expand-lg navbar-light">
                                 <a className="navbar-brand mr-4" href="index.php">
-                                    <img src="images/whiteLogo.png" className="whiteLogo" alt="whiteLogo"/>
-                                        <img src="images/blackLogo.png" className="blackLogo" alt="blackLogo"/>
+                                    <Image src={logos.whiteLogo.src } fill/>
+                                    <Image src={logos.blackLogo.src } fill/>
                                         </a>
                                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                             <span className="navbar-toggler-icon"></span>

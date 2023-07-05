@@ -1,0 +1,18 @@
+{
+    "logos": {
+        "blackLogo": {
+            "src": "/images/blackLogo.png",
+            "alt":"black logo"
+        },
+        "whiteLogo": {
+            "src": "/images/whiteLogo.png",
+            "alt":"white logo"
+
+        }
+    },
+    "home": {
+        "banner": {
+            "src": "/images/test.webp"
+        }
+    }
+}

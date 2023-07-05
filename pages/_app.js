@@ -8,7 +8,7 @@ import { GoogleFonts } from 'next-google-fonts';
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500&family=Orbitron:wght@400;500&family=Montserrat:wght@400;500&display=swap" />
+      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" />
       <Component {...pageProps} />;
 
     </>)
