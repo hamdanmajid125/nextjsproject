@@ -12,8 +12,8 @@ const Header = () => {
                         <div className="col-lg-12">
                             <nav className="navbar navbar-expand-lg navbar-light">
                                 <a className="navbar-brand mr-4" href="index.php">
-                                    <Image src={logos.whiteLogo.src } fill/>
-                                    <Image src={logos.blackLogo.src } fill/>
+                                    <Image src={logos.whiteLogo.src}  width="0" height="0" sizes="100vw" className="whiteLogo w-full h-auto" alt='design-diverse-white-logo'/>
+                                    <Image src={logos.blackLogo.src}  width="0" height="0" sizes="100vw" className="blackLogo w-full h-auto" alt='design-diverse-black-logo'/>
                                         </a>
                                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                             <span className="navbar-toggler-icon"></span>
@@ -251,6 +251,7 @@ const Header = () => {
                         </div>
                     </div>
             </header>
+            
 
     );
 }

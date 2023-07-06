@@ -3,6 +3,9 @@ import "../styles/globals.css";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import { GoogleFonts } from 'next-google-fonts';
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 
 
 function MyApp({ Component, pageProps }) {
