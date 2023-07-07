@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { logos } from '../utils/images.json'
+import { logos } from '../../utils/images.json'
 
 
 

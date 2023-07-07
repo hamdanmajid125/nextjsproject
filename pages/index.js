@@ -1,14 +1,20 @@
 import Head from 'next/head';
-import Header from '../components/Header';
+import Header from '../components/global/Header';
 import Image from 'next/image'
-import SideInquiryForm from '../components/SideInquiryForm';
-import SocialIcons from '../components/SocialIcons'
+import SideInquiryForm from '../components/global/SideInquiryForm';
+import SocialIcons from '../components/global/SocialIcons'
 import { home } from '../utils/images.json'
+import $ from 'jquery';
+import { useEffect } from 'react';
+import FancyBox from '../components/fancybox/FancyBox';
+
 
 
 
 
 export default function Home() {
+
+
   return (
     <>
       <Head>
@@ -20,6 +26,7 @@ export default function Home() {
       <Header />
       <SideInquiryForm />
       <SocialIcons />
+      
       <section style={{ marginTop: "500px" }}></section>
       <section className="form-section">
         <div className="container">
@@ -143,6 +150,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="small-div">
+          
                 <a
                   data-fancybox="gallery"
                   href="images/portfolio/graphic-design/2.webp"
@@ -266,7 +274,7 @@ export default function Home() {
                   >
                     <Image src={home.portfolio[7]} className='five-gif websitePort' fill />
 
-                    
+
                   </a>
                   <div className="overlay">
                     <a
@@ -296,9 +304,9 @@ export default function Home() {
               <div className="last_row">
                 <div className="small-div">
                   <a data-fancybox="gallery" href="images/portfolio/big/9.webp">
-                  <Image src={home.portfolio[8]} className='smallNine' fill />
+                    <Image src={home.portfolio[8]} className='smallNine' fill />
 
-                   
+
                     <div className="overlay">
                       <div className="text textXtra textXtra7">High Hopes</div>
                     </div>
@@ -310,7 +318,7 @@ export default function Home() {
               <div className="last_row">
                 <div className="small-div">
                   <a data-fancybox="gallery" href="images/portfolio/big/10.webp">
-                  <Image src={home.portfolio[8]} className='port10' fill />
+                    <Image src={home.portfolio[8]} className='port10' fill />
 
                     <div className="overlay">
                       <div className="text textXtra textXtra1 textXtra8">
