@@ -26,7 +26,7 @@ export default function Home() {
       <Header />
       <SideInquiryForm />
       <SocialIcons />
-      
+
       <section style={{ marginTop: "500px" }}></section>
       <section className="form-section">
         <div className="container">
@@ -142,190 +142,61 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-2 col-12">
               <div className="small-div">
-                <a data-fancybox="gallery" href="images/1.gif">
-                  <Image src={home.portfolio[0]} fill></Image>
-                  <div className="overlay">
-                    <div className="text textXtra textXtra2">Without Colors</div>
-                  </div>
-                </a>
+                <FancyBox src={home.portfolio[0]}  fancy-class="text textXtra textXtra2" fancy-title="Without Colors" />
               </div>
               <div className="small-div">
-          
-                <a
-                  data-fancybox="gallery"
-                  href="images/portfolio/graphic-design/2.webp"
-                >
-                  <Image src={home.portfolio[1]} fill></Image>
-
-                </a>
-                <div className="overlay">
-                  <a
-                    data-fancybox="gallery"
-                    href="images/portfolio/graphic-design/2.webp"
-                  >
-                    <div className="text textXtra textXtra2">Atcos Staffing</div>
-                  </a>
-                  <div className="viewButton">
-                    <a
-                      data-fancybox="gallery"
-                      href="images/portfolio/graphic-design/2.webp"
-                    ></a>
-                    <a
-                      href="https://demowebsitess.com/ATCOS-STAFFING/"
-                      target="_blank"
-                      className="yellowChat2"
-                    >
-                      View
-                    </a>
-                  </div>
-                </div>
+                <FancyBox src={home.portfolio[1]} fancy-height="317px" fancy-image-class="smallTwo websitePort" fancy-class="text textXtra textXtra2" fancy-title="Atcos Staffing" />
               </div>
             </div>
             <div className="col-lg-5 col-12">
               <div className="small-div">
-                <a data-fancybox="gallery" href="images/portfolio/big/2.webp">
-                  <Image src={home.portfolio[2]} className='only-big' fill />
+                <FancyBox src={home.portfolio[2]} fancy-image-class="only-big" fancy-class="text" fancy-title="Black &amp; Colors" />
 
-                  <div className="overlay">
-                    <div className="text">Black &amp; Colors</div>
-                  </div>
-                </a>
               </div>
             </div>
             <div className="col-lg-2 col-12">
               <div className="small-div">
-                <a data-fancybox="gallery" href="images/portfolio/big/3.webp">
-                  <Image src={home.portfolio[3]} className='only-bigXtra' fill />
+                <FancyBox src={home.portfolio[3]} fancy-image-class="only-bigXtra" fancy-class="text textXtra" fancy-title="Brochure" />
 
-
-                  <div className="overlay">
-                    <div className="text textXtra">Brochure</div>
-                  </div>
-                </a>
               </div>
             </div>
             <div className="col-lg-3 col-12">
               <div className="small-div">
-                <a data-fancybox="gallery" href="images/portfolio/big/4.gif">
-                  <Image src={home.portfolio[4]} className='five-gif' fill />
-
-
-                  <div className="overlay">
-                    <div className="text textXtra textXtra2 textXtra3">
-                      The Oder Side Of The Moon
-                    </div>
-                  </div>
-                </a>
+                <FancyBox src={home.portfolio[4]} fancy-image-class="five-gif" fancy-class="text textXtra textXtra2 textXtra3" fancy-title="The Oder Side Of The Moon" />
               </div>
               <div className="small-div">
-                <a
-                  data-fancybox="gallery"
-                  href="images/portfolio/graphic-design/3.webp"
-                >
-                  <Image src={home.portfolio[5]} className='five-gif' fill />
+                <FancyBox src={home.portfolio[5]} fancy-height="317px" fancy-image-class="five-gif" fancy-class="text textXtra" fancy-title="KIC" />
 
-
-                </a>
-                <div className="overlay">
-                  <a
-                    data-fancybox="gallery"
-                    href="images/portfolio/graphic-design/3.webp"
-                  >
-                    <div className="text textXtra ">KIC</div>
-                  </a>
-                  <div className="viewButton">
-                    <a
-                      data-fancybox="gallery"
-                      href="images/portfolio/graphic-design/3.webp"
-                    ></a>
-                    <a
-                      href="https://demowebsitess.com/custom-backend/keep-it-clean-01/public/"
-                      target="_blank"
-                      className="yellowChat2"
-                    >
-                      View
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="col-lg-2 col-12">
               <div className="last_row">
                 <div className="small-div">
-                  <a data-fancybox="gallery" href="images/portfolio/big/6.gif">
-                    <Image src={home.portfolio[6]} className='smallSix' fill />
-
-
-                    <div className="overlay">
-                      <div className="text textXtra textXtra2 textXtra4">
-                        Signs Everywhere
-                      </div>
-                    </div>
-                  </a>
+                  <FancyBox src={home.portfolio[6]} fancy-image-class="smallSix" fancy-class="text textXtra textXtra2 textXtra4" fancy-title="The AG Store" />
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-12">
               <div className="last_row">
                 <div className="small-div">
-                  <a
-                    data-fancybox="gallery"
-                    href="images/portfolio/graphic-design/1.webp"
-                  >
-                    <Image src={home.portfolio[7]} className='five-gif websitePort' fill />
+                  <FancyBox src={home.portfolio[7]}  fancy-height="317px" fancy-image-class="five-gif websitePort" fancy-class="text" fancy-title="Signs Everywhere" />
 
-
-                  </a>
-                  <div className="overlay">
-                    <a
-                      data-fancybox="gallery"
-                      href="images/portfolio/graphic-design/1.webp"
-                    >
-                      <div className="text">The AG Store</div>
-                    </a>
-                    <div className="viewButton">
-                      <a
-                        data-fancybox="gallery"
-                        href="images/portfolio/graphic-design/1.webp"
-                      ></a>
-                      <a
-                        href="https://demowebsitess.com/Antonio/"
-                        target="_blank"
-                        className="yellowChat2"
-                      >
-                        View
-                      </a>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
             <div className="col-lg-2 col-12">
               <div className="last_row">
                 <div className="small-div">
-                  <a data-fancybox="gallery" href="images/portfolio/big/9.webp">
-                    <Image src={home.portfolio[8]} className='smallNine' fill />
+                  <FancyBox src={home.portfolio[8]} fancy-image-class="smallNine" fancy-class="text textXtra textXtra7" fancy-title="High Hopes" />
 
-
-                    <div className="overlay">
-                      <div className="text textXtra textXtra7">High Hopes</div>
-                    </div>
-                  </a>
                 </div>
               </div>
             </div>
             <div className="col-lg-5 col-12">
               <div className="last_row">
                 <div className="small-div">
-                  <a data-fancybox="gallery" href="images/portfolio/big/10.webp">
-                    <Image src={home.portfolio[8]} className='port10' fill />
+                  <FancyBox src={home.portfolio[9]}  fancy-height="318px" fancy-image-class="port10" fancy-class="text textXtra textXtra1 textXtra8" fancy-title="Musician Show" />
 
-                    <div className="overlay">
-                      <div className="text textXtra textXtra1 textXtra8">
-                        Musician Show
-                      </div>
-                    </div>
-                  </a>
                 </div>
               </div>
             </div>
