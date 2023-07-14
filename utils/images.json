@@ -28,6 +28,27 @@
             "/images/8.webp",
             "/images/9.webp",
             "/images/10.webp"
+        ],
+        "advertiseOne":{
+            "src":"/images/advertise-one.webp"
+        },
+        "advertiseTwo":{
+            "src":"/images/advertise-two.webp"
+        },
+        "groupImg":{
+            "src":"/images/groupImg.webp"
+        },
+        "brandPort":[
+            
+            "/images/port-logo-design.gif",
+            "/images/port-seo.gif",
+            "/images/port-video-animation.gif",
+            "/images/port-app-design-dev.gif",
+            "/images/port-web-design.gif",
+            "/images/port-brand.gif",
+            "/images/port-social-media-marketing.gif",
+            "/images/port-logo-design.gif"
+            
         ]
     }
 }
