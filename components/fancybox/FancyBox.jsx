@@ -15,13 +15,7 @@ const FancyBox = (props) => {
     }, [])
     return (
         <>
-            <Head>
-                <link
-                    href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
-                    rel="stylesheet"
-                />
-                
-            </Head>
+          
             <a data-fancybox="gallery" href={props.src}>
                 <Image src={props.src}width={0} height={0} className={props['fancy-image-class'] ? props['fancy-image-class'] : ''} sizes="100vw" style={{ width: '100%', height: props['fancy-height'] ? props['fancy-height'] : 'auto'}} // optional
                 />

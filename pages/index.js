@@ -1,23 +1,23 @@
 import Head from 'next/head';
-import Header from '../components/global/Header';
 import Image from 'next/image'
 import SideInquiryForm from '../components/global/SideInquiryForm';
 import SocialIcons from '../components/global/SocialIcons'
 import { home } from '../utils/images.json'
-import $ from 'jquery';
-import { useEffect } from 'react';
 import FancyBox from '../components/fancybox/FancyBox';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 
+import dynamic from 'next/dynamic';
 
 
 
 
 export default function Home() {
 
-
+  const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
+    ssr: false,
+  });
   return (
     <>
       <Head>
@@ -26,7 +26,6 @@ export default function Home() {
 
 
       </Head>
-      <Header />
       <SideInquiryForm />
       <SocialIcons />
 
@@ -210,7 +209,7 @@ export default function Home() {
         className="packages packagesXtra"
         style={{
           backgroundImage:
-            'url("images/packages/social-media-package-background.webp")'
+            'url("images/social-media-package-background.webp")'
         }}
       >
         <div className="container">
@@ -2172,401 +2171,189 @@ export default function Home() {
             data-aos="fade-down"
             data-aos-duration={1500}
           >
-            <div className="carouselNew-carousel owl-carousel owl-theme owl-loaded owl-drag">
-              <div className="owl-stage-outer">
-                <div
-                  className="owl-stage"
-                  style={{
-                    transition: "all 0s ease 0s",
-                    width: 6344,
-                    transform: "translate3d(-1268px, 0px, 0px)"
-                  }}
-                >
-                  <div className="owl-item cloned" style={{ width: "634.333px" }}>
-                    <div className="item">
-                      <div className="row align-items-center text-center">
-                        <div className="col-lg-12">
-                          <div className="banner-content">
-                            <div className="Stars">
-                              <FontAwesomeIcon className="my-float"
-                                icon={faQuoteLeft} style={{ fontSize: 40, marginTop: 10 }}
-
-
-                              />
-                               <FontAwesomeIcon className="my-float"
-                                icon={faQuoteLeft} style={{ fontSize: 40, marginTop: 10 }}/>
-                            </div>
-                            <p>
-                              Since I started at Design Diverse in July, we've been
-                              trying to find new ways to expand our clientele. They
-                              did a complete redesign of our website, including search
-                              engine optimization and a variety of other initiatives.
-                              The job has produced fantastic results; these people are
-                              experts in their field.&nbsp;
-                            </p>
-                            <h6>DANIEL NOYOLA</h6>
-                          </div>
-                        </div>
+            <OwlCarousel
+              className="carouselNew-carousel owl-carousel owl-theme owl-loaded owl-drag"
+              loop
+              margin={10}
+              nav
+            >
+              <div className="item">
+                <div className="row align-items-center text-center">
+                  <div className="col-lg-12">
+                    <div className="banner-content">
+                      <div className="Stars">
+                        {/* <img src="images/slider.webp" class="img-fluid lazy" alt=""> */}
+                        <FontAwesomeIcon className="my-float"
+                          icon={faQuoteLeft} style={{ fontSize: 40, marginTop: 10 }} />
                       </div>
-                    </div>
-                  </div>
-                  <div className="owl-item cloned" style={{ width: "634.333px" }}>
-                    <div className="item">
-                      <div className="row align-items-center text-center">
-                        <div className="col-lg-12">
-                          <div className="banner-content">
-                            <div className="Stars">
-                              {/* <img src="images/slider.webp" class="img-fluid lazy" alt=""> */}
-                               <FontAwesomeIcon className="my-float"
-                                icon={faQuoteLeft} style={{ fontSize: 40, marginTop: 10 }}/>
-                            </div>
-                            <p>
-                              Your team has done an excellent job with the website,
-                              and we appreciate all of your hard work. We are quite
-                              pleased with the outcome of this massive project.
-                            </p>
-                            <h6>DARYL HILTON</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="owl-item cloned active"
-                    style={{ width: "634.333px" }}
-                  >
-                    <div className="item">
-                      <div className="row align-items-center text-center">
-                        <div className="col-lg-12">
-                          <div className="banner-content">
-                            <div className="Stars">
-                              {/* <img src="images/slider.webp" class="img-fluid lazy" alt=""> */}
-                               <FontAwesomeIcon className="my-float"
-                                icon={faQuoteLeft} style={{ fontSize: 40, marginTop: 10 }}/>
-                            </div>
-                            <p>
-                              Since I started at Design Diverse in July, we've been
-                              trying to find new ways to expand our clientele. They
-                              did a complete redesign of our website, including search
-                              engine optimization and a variety of other initiatives.
-                              The job has produced fantastic results; these people are
-                              experts in their field.&nbsp;
-                            </p>
-                            <h6>DANIEL NOYOLA</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="owl-item active center"
-                    style={{ width: "634.333px" }}
-                  >
-                    <div className="item">
-                      <div className="row align-items-center text-center">
-                        <div className="col-lg-12">
-                          <div className="banner-content">
-                            <div className="Stars">
-                              {/* <img src="images/slider.webp" class="img-fluid lazy" alt=""> */}
-                               <FontAwesomeIcon className="my-float"
-                                icon={faQuoteLeft} style={{ fontSize: 40, marginTop: 10 }}/>
-                            </div>
-                            <p>
-                              Your team has done an excellent job with the website,
-                              and we appreciate all of your hard work. We are quite
-                              pleased with the outcome of this massive project.
-                            </p>
-                            <h6>DARYL HILTON</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="owl-item cloned active"
-                    style={{ width: "634.333px" }}
-                  >
-                    <div className="item">
-                      <div className="row align-items-center text-center">
-                        <div className="col-lg-12">
-                          <div className="banner-content">
-                            <div className="Stars">
-                              {/* <img src="images/slider.webp" class="img-fluid lazy" alt=""> */}
-                               <FontAwesomeIcon className="my-float"
-                                icon={faQuoteLeft} style={{ fontSize: 40, marginTop: 10 }}/>
-                            </div>
-                            <p>
-                              To put it simply, Design Diverse has the ideal blend of
-                              polite and professional personnel. Their approach to
-                              creating websites as a team is fascinating, and the end
-                              results are stunning.
-                            </p>
-                            <h6>ANDREW DAVIDS</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="owl-item cloned" style={{ width: "634.333px" }}>
-                    <div className="item">
-                      <div className="row align-items-center text-center">
-                        <div className="col-lg-12">
-                          <div className="banner-content">
-                            <div className="Stars">
-                              {/* <img src="images/slider.webp" class="img-fluid lazy" alt=""> */}
-                               <FontAwesomeIcon className="my-float"
-                                icon={faQuoteLeft} style={{ fontSize: 40, marginTop: 10 }}/>
-                            </div>
-                            <p>
-                              Since I started at Design Diverse in July, we've been
-                              trying to find new ways to expand our clientele. They
-                              did a complete redesign of our website, including search
-                              engine optimization and a variety of other initiatives.
-                              The job has produced fantastic results; these people are
-                              experts in their field.&nbsp;
-                            </p>
-                            <h6>DANIEL NOYOLA</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="owl-item cloned" style={{ width: "634.333px" }}>
-                    <div className="item">
-                      <div className="row align-items-center text-center">
-                        <div className="col-lg-12">
-                          <div className="banner-content">
-                            <div className="Stars">
-                              {/* <img src="images/slider.webp" class="img-fluid lazy" alt=""> */}
-                               <FontAwesomeIcon className="my-float"
-                                icon={faQuoteLeft} style={{ fontSize: 40, marginTop: 10 }}/>
-                            </div>
-                            <p>
-                              Your team has done an excellent job with the website,
-                              and we appreciate all of your hard work. We are quite
-                              pleased with the outcome of this massive project.
-                            </p>
-                            <h6>DARYL HILTON</h6>
-                          </div>
-                        </div>
-                      </div>
+                      <p>
+                        Your team has done an excellent job with the website,
+                        and we appreciate all of your hard work. We are quite
+                        pleased with the outcome of this massive project.
+                      </p>
+                      <h6>DARYL HILTON</h6>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="owl-nav disabled">
-                <button type="button" role="presentation" className="owl-prev">
-                  <span aria-label="Previous">‹</span>
-                </button>
-                <button type="button" role="presentation" className="owl-next">
-                  <span aria-label="Next">›</span>
-                </button>
+              <div className="item">
+                <div className="row align-items-center text-center">
+                  <div className="col-lg-12">
+                    <div className="banner-content">
+                      <div className="Stars">
+                        {/* <img src="images/slider.webp" class="img-fluid lazy" alt=""> */}
+                        <FontAwesomeIcon className="my-float"
+                          icon={faQuoteLeft} style={{ fontSize: 40, marginTop: 10 }} />
+                      </div>
+                      <p>
+                        Your team has done an excellent job with the website,
+                        and we appreciate all of your hard work. We are quite
+                        pleased with the outcome of this massive project.
+                      </p>
+                      <h6>DARYL HILTON</h6>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="owl-dots disabled" />
-              <div className="owl-nav disabled">
-                <button type="button" role="presentation" className="owl-prev">
-                  <span aria-label="Previous">‹</span>
-                </button>
-                <button type="button" role="presentation" className="owl-next">
-                  <span aria-label="Next">›</span>
-                </button>
+              <div className="item">
+                <div className="row align-items-center text-center">
+                  <div className="col-lg-12">
+                    <div className="banner-content">
+                      <div className="Stars">
+                        {/* <img src="images/slider.webp" class="img-fluid lazy" alt=""> */}
+                        <FontAwesomeIcon className="my-float"
+                          icon={faQuoteLeft} style={{ fontSize: 40, marginTop: 10 }} />
+                      </div>
+                      <p>
+                        Your team has done an excellent job with the website,
+                        and we appreciate all of your hard work. We are quite
+                        pleased with the outcome of this massive project.
+                      </p>
+                      <h6>DARYL HILTON</h6>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="owl-dots disabled" />
-            </div>
+              <div className="item">
+                <div className="row align-items-center text-center">
+                  <div className="col-lg-12">
+                    <div className="banner-content">
+                      <div className="Stars">
+                        {/* <img src="images/slider.webp" class="img-fluid lazy" alt=""> */}
+                        <FontAwesomeIcon className="my-float"
+                          icon={faQuoteLeft} style={{ fontSize: 40, marginTop: 10 }} />
+                      </div>
+                      <p>
+                        Your team has done an excellent job with the website,
+                        and we appreciate all of your hard work. We are quite
+                        pleased with the outcome of this massive project.
+                      </p>
+                      <h6>DARYL HILTON</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </OwlCarousel>
+
+
           </div>
         </div>
       </section>
 
 
       <section className="formSection">
-  <div className="container-fluid">
-    <div className="row align-items-center">
-      <div className="col-lg-12">
-        <div className="formSection-content text-center mb-md-5">
-          <h2>WEB PRESENCE ON THE INTERNET</h2>
-          <p>
-            We take a comprehensive approach to website development. The needs
-            of each customer are taken into account while developing a plan.
-            <span className="d-block">
-              We are a group of passionate, hardworking people who deeply
-              understand various digital technologies.
-            </span>
-          </p>
-        </div>
-      </div>
-      <div className="col-lg-5 col-12">
-        <div
-          className="formImgDiv aos-init aos-animate"
-          data-aos="fade-down"
-          data-aos-duration={1500}
-        >
-         <Image src={home.foamingImage.src} width="0"
-                      height="0"
-                      sizes="100vw"
-                      className="w-100 h-auto" />
-        </div>
-      </div>
-      <div className="col-lg-7 col-12">
-        <div className="formImg-content">
-          <h2>KEEP IT SIMPLE BUT UNIQUE</h2>
-          <p>
-            Our "keep it simple" philosophy means that we focus on creating
-            clean, minimalistic designs that are easy on the eyes and easy to
-            navigate. We believe a website should be easy to understand and use
-            without any unnecessary clutter or distractions. We make it easy for
-            users to find what they're looking for by keeping the navigation
-            simple and straightforward.
-          </p>
-          <form
-            className="form-inline form-inlineXtra mt-5 small-form"
-            method="POST"
-            noValidate="novalidate"
-          >
-            {/* Custom Fields */}
-            <input
-              type="hidden"
-              name="url"
-              defaultValue="https://designdiverse.com/"
-            />
-            <input
-              type="hidden"
-              name="domain"
-              defaultValue="designdiverse.com"
-            />
-            <input
-              type="hidden"
-              name="subject"
-              defaultValue="Banner Form (designdiverse.com)"
-            />
-            <div className="form-group mr-3">
-              <input type="text" name="name" placeholder="Name" />
-            </div>
-            <div className="form-group mr-3">
-              <input type="text" name="phone" placeholder="Phone" />
-            </div>
-            <button className="formBtn" type="submit">
-              Submit
-            </button>
-            <div className="row">
-              <div className="col-md-12 col-xs-12">
-                <div
-                  className="error mt-3 alert alert-danger text-left mb-0"
-                  style={{ display: "none" }}
-                ></div>
-                <div
-                  className="success mt-3 alert alert-success text-center mb-0 p-2 thankMesg"
-                  style={{ display: "none" }}
-                />
-                <div className="loader" style={{ display: "none" }}>
-                  <img alt="loader" src="images/loader.gif" />
-                </div>
+        <div className="container-fluid">
+          <div className="row align-items-center">
+            <div className="col-lg-12">
+              <div className="formSection-content text-center mb-md-5">
+                <h2>WEB PRESENCE ON THE INTERNET</h2>
+                <p>
+                  We take a comprehensive approach to website development. The needs
+                  of each customer are taken into account while developing a plan.
+                  <span className="d-block">
+                    We are a group of passionate, hardworking people who deeply
+                    understand various digital technologies.
+                  </span>
+                </p>
               </div>
             </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<footer className="MainFooter">
-  <div className="container">
-    <div className="row">
-      <div className="col-lg-4 col-md-6">
-        <div className="Quicklinkheading-1">
-          <div className="footer-logo">
-            <a href="index.php">
-              <img src="images/blackLogo.png" alt="blackLogo" />
-            </a>
-          </div>
-          <p>
-            Offering digital services to a diverse range of audiences to make
-            them flourish and reach the height of success they deserve.
-          </p>
-          <div className="FooterIcons">
-            <a href="#">
-              <i className="fab fa-youtube" />
-            </a>
-            <a href="#">
-              <i className="fab fa-linkedin" />
-            </a>
-            <a href="#">
-              <i className="fab fa-instagram" />
-            </a>
-            <a href="#">
-              <i className="fa-brands fa-facebook" />
-            </a>
-          </div>
-          <div className="mt-4">
-            <img src="images/payment.png" className="img-fluid" />
-          </div>
-        </div>
-      </div>
-      <div className="col-lg-2 col-md-6">
-        <div className="Quicklinkheading">
-          <h5>QUICK LINKS</h5>
-          <ul>
-            <li>
-              <a href="#">About Us</a>
-            </li>
-            <li>
-              <a href="contact.php">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="col-lg-2 col-md-6">
-        <div className="Quicklinkheading">
-          <h5>CUSTOMER AREA</h5>
-          <ul>
-            <li>
-              <a href="#">My Account</a>
-            </li>
-            <li>
-              <a href="terms.php">Terms</a>
-            </li>
-            <li>
-              <a href="privacy-policy.php">Privacy Policy</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="col-lg-4 col-md-6">
-        <div className="Quicklinkheading">
-          <h5>Contact</h5>
-          <p className="para">
-            Feel free to reach out, as we cater to clients from all over the
-            globe.
-          </p>
-          <div className="contactTop">
-            <div className="anyQuestion">
-              <div className="headphonesIcon mr-3">
-                <i className="fa-solid fa-headphones" />
-              </div>
-              <div className="headphonesIcon2">
-                <a href="tel:+18888350266">
-                  <p>
-                    Have any question?{" "}
-                    <span className="d-block">+1 (888) 835 0266 </span>
-                  </p>
-                </a>
+            <div className="col-lg-5 col-12">
+              <div
+                className="formImgDiv aos-init aos-animate"
+                data-aos="fade-down"
+                data-aos-duration={1500}
+              >
+                <Image src={home.foamingImage.src} width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-100 h-auto" />
               </div>
             </div>
-            <div className="contactBtnDiv">
-              <a href="#" className="contactBtn">
-                live chat
-              </a>
+            <div className="col-lg-7 col-12">
+              <div className="formImg-content">
+                <h2>KEEP IT SIMPLE BUT UNIQUE</h2>
+                <p>
+                  Our "keep it simple" philosophy means that we focus on creating
+                  clean, minimalistic designs that are easy on the eyes and easy to
+                  navigate. We believe a website should be easy to understand and use
+                  without any unnecessary clutter or distractions. We make it easy for
+                  users to find what they're looking for by keeping the navigation
+                  simple and straightforward.
+                </p>
+                <form
+                  className="form-inline form-inlineXtra mt-5 small-form"
+                  method="POST"
+                  noValidate="novalidate"
+                >
+                  {/* Custom Fields */}
+                  <input
+                    type="hidden"
+                    name="url"
+                    defaultValue="https://designdiverse.com/"
+                  />
+                  <input
+                    type="hidden"
+                    name="domain"
+                    defaultValue="designdiverse.com"
+                  />
+                  <input
+                    type="hidden"
+                    name="subject"
+                    defaultValue="Banner Form (designdiverse.com)"
+                  />
+                  <div className="form-group mr-3">
+                    <input type="text" name="name" placeholder="Name" />
+                  </div>
+                  <div className="form-group mr-3">
+                    <input type="text" name="phone" placeholder="Phone" />
+                  </div>
+                  <button className="formBtn" type="submit">
+                    Submit
+                  </button>
+                  <div className="row">
+                    <div className="col-md-12 col-xs-12">
+                      <div
+                        className="error mt-3 alert alert-danger text-left mb-0"
+                        style={{ display: "none" }}
+                      ></div>
+                      <div
+                        className="success mt-3 alert alert-success text-center mb-0 p-2 thankMesg"
+                        style={{ display: "none" }}
+                      />
+                      <div className="loader" style={{ display: "none" }}>
+                        <img alt="loader" src="images/loader.gif" />
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-
-
-
-
+      </section>
     </>
   )
 }
