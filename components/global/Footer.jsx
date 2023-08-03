@@ -1,4 +1,7 @@
 import React from 'react'
+import { faYoutube, faLinkedin, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 const Footer = () => {
     return (
@@ -18,16 +21,19 @@ const Footer = () => {
                             </p>
                             <div className="FooterIcons">
                                 <a href="#">
-                                    <i className="fab fa-youtube" />
+                                    <FontAwesomeIcon icon={faYoutube} style={{ fontSize: 19 }} />
                                 </a>
                                 <a href="#">
-                                    <i className="fab fa-linkedin" />
+                                    <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: 19 }} />
+
                                 </a>
                                 <a href="#">
-                                    <i className="fab fa-instagram" />
+                                    <FontAwesomeIcon icon={faInstagram} style={{ fontSize: 19 }} />
+
                                 </a>
                                 <a href="#">
-                                    <i className="fa-brands fa-facebook" />
+                                    <FontAwesomeIcon icon={faFacebook} style={{ fontSize: 19 }} />
+
                                 </a>
                             </div>
                             <div className="mt-4">

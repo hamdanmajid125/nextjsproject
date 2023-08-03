@@ -38,6 +38,20 @@
         "groupImg":{
             "src":"/images/groupImg.webp"
         },
+        "packageBackground":[
+            "/images/background-01.webp",
+            "/images/background-03.webp",
+            "/images/background-02.webp",
+            "/images/branding-package-background.webp",
+            "/images/video-package-background.webp",
+            "/images/seo-package-bg.webp",
+            "/images/web-content-package-bg.webp",
+            "/images/social-media-package-background.webp",
+            "/images/animated-logo-package-bg.webp"
+            
+            
+
+        ],
         "brandPort":[
             
             "/images/port-logo-design.gif",

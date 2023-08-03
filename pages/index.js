@@ -4,9 +4,10 @@ import SideInquiryForm from '../components/global/SideInquiryForm';
 import SocialIcons from '../components/global/SocialIcons'
 import { home } from '../utils/images.json'
 import FancyBox from '../components/fancybox/FancyBox';
+import Banner from '../components/fancybox/Banner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
 import dynamic from 'next/dynamic';
 
@@ -17,7 +18,7 @@ export default function Home() {
 
   const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
     ssr: false,
-  });
+  })
   return (
     <>
       <Head>
@@ -28,14 +29,13 @@ export default function Home() {
       </Head>
       <SideInquiryForm />
       <SocialIcons />
-
+      <Banner/>
       <section style={{ marginTop: "500px" }}></section>
       <section className="form-section">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <form method="POST" className="form_submission" noValidate="novalidate">
-                {/* Custom Fields */}
                 <input
                   type="hidden"
                   name="url"
@@ -234,7 +234,7 @@ export default function Home() {
                 <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                   <li className="nav-item">
                     <a
-                      data-image="images/packages/background-01.webp"
+                      data-image={ home.packageBackground[0] }
                       className="nav-link"
                       id="pills-logo-design-tab"
                       data-toggle="pill"
@@ -248,7 +248,7 @@ export default function Home() {
                   </li>
                   <li className="nav-item">
                     <a
-                      data-image="images/packages/background-03.webp"
+                      data-image={ home.packageBackground[1] }
                       className="nav-link"
                       id="pills-website-design-development-tab"
                       data-toggle="pill"
@@ -262,7 +262,7 @@ export default function Home() {
                   </li>
                   <li className="nav-item">
                     <a
-                      data-image="images/packages/background-02.webp"
+                      data-image={ home.packageBackground[2] }
                       className="nav-link   "
                       id="pills-ecommerce-solutions-tab"
                       data-toggle="pill"
@@ -276,7 +276,7 @@ export default function Home() {
                   </li>
                   <li className="nav-item">
                     <a
-                      data-image="images/packages/branding-package-background.webp"
+                      data-image={ home.packageBackground[3] }
                       className="nav-link   "
                       id="pills-branding-tab"
                       data-toggle="pill"
@@ -290,7 +290,7 @@ export default function Home() {
                   </li>
                   <li className="nav-item">
                     <a
-                      data-image="images/packages/video-package-background.webp"
+                      data-image={ home.packageBackground[4] }
                       className="nav-link   "
                       id="pills-video-animation-tab"
                       data-toggle="pill"
@@ -304,7 +304,7 @@ export default function Home() {
                   </li>
                   <li className="nav-item">
                     <a
-                      data-image="images/packages/seo-package-bg.webp"
+                      data-image={ home.packageBackground[5] }
                       className="nav-link   "
                       id="pills-search-engine-optimization-tab"
                       data-toggle="pill"
@@ -318,7 +318,7 @@ export default function Home() {
                   </li>
                   <li className="nav-item">
                     <a
-                      data-image="images/packages/web-content-package-bg.webp"
+                      data-image={ home.packageBackground[6] }
                       className="nav-link"
                       id="pills-web-content-writing-tab"
                       data-toggle="pill"
@@ -332,7 +332,7 @@ export default function Home() {
                   </li>
                   <li className="nav-item">
                     <a
-                      data-image="images/packages/social-media-package-background.webp"
+                      data-image={ home.packageBackground[7] }
                       className="nav-link active show"
                       id="pills-social-media-marketing-tab"
                       data-toggle="pill"
@@ -346,7 +346,7 @@ export default function Home() {
                   </li>
                   <li className="nav-item">
                     <a
-                      data-image="images/packages/animated-logo-package-bg.webp"
+                      data-image={ home.packageBackground[8] }
                       className="nav-link   "
                       id="pills-animated-logo-tab"
                       data-toggle="pill"
@@ -1886,7 +1886,7 @@ export default function Home() {
                   </div>
                   <div className="col-lg-4 advertiseOneCol">
                     <div className="advertiseOne">
-                      <Image src={home.advertiseOne.src} fill />
+                      <Image src={home.advertiseOne.src} alt='advertiseone' fill />
                     </div>
                   </div>
                 </div>
@@ -1919,7 +1919,7 @@ export default function Home() {
                   </div>
                   <div className="col-lg-4 advertiseOneCol">
                     <div className="advertiseOne">
-                      <Image src={home.advertiseTwo.src} width="0"
+                      <Image src={home.advertiseTwo.src} width="0" alt='advertisetwo'
                         height="0"
                         sizes="100vw"
                         className="w-100 h-auto" />
@@ -1938,7 +1938,7 @@ export default function Home() {
             <div className="col-lg-12">
               <div className="groupSectionImg">
                 <Image src={home.groupImg.src} width="0"
-                  height="0"
+                  height="0" alt='groupimage'
                   sizes="100vw"
                   className="w-full h-auto" />
                 <div className="groupSectionContent-one groupSectionContent-oneXtra">
@@ -2003,7 +2003,7 @@ export default function Home() {
                   <div className="goalicon">
                     <Image src={home.brandPort[0]} width="0"
                       height="0"
-                      sizes="100vw"
+                      sizes="100vw" alt='brand-portfolio-first'
                       className="w-100 h-auto" />
 
                   </div>
@@ -2022,7 +2022,7 @@ export default function Home() {
                 <div className="Goalbox">
                   <div className="goalicon">
                     <Image src={home.brandPort[1]} width="0"
-                      height="0"
+                      height="0" alt='brand-portfolio-second'
                       sizes="100vw"
                       className="w-100 h-auto" />
                   </div>
@@ -2043,6 +2043,7 @@ export default function Home() {
                   <div className="goalicon">
                     <Image src={home.brandPort[2]} width="0"
                       height="0"
+                      alt='brand-portfolio-third'
                       sizes="100vw"
                       className="w-100 h-auto" />
                   </div>
@@ -2063,6 +2064,7 @@ export default function Home() {
                   <div className="goalicon">
                     <Image src={home.brandPort[3]} width="0"
                       height="0"
+                      alt='brand-portfolio-fourth'
                       sizes="100vw"
                       className="w-100 h-auto" />
                   </div>
@@ -2083,6 +2085,7 @@ export default function Home() {
                   <div className="goalicon">
                     <Image src={home.brandPort[4]} width="0"
                       height="0"
+                      alt='brand-portfolio-fifth'
                       sizes="100vw"
                       className="w-100 h-auto" />
                   </div>
@@ -2103,6 +2106,7 @@ export default function Home() {
 
                     <Image src={home.brandPort[5]} width="0"
                       height="0"
+                      alt='brand-portfolio-sixth'
                       sizes="100vw"
                       className="w-100 h-auto" />
                   </div>
@@ -2122,6 +2126,7 @@ export default function Home() {
                   <div className="goalicon">
                     <Image src={home.brandPort[6]} width="0"
                       height="0"
+                      alt='brand-portfolio-seventh'
                       sizes="100vw"
                       className="w-100 h-auto" />
                   </div>
@@ -2141,6 +2146,7 @@ export default function Home() {
                   <div className="goalicon">
                     <Image src={home.brandPort[7]} width="0"
                       height="0"
+                      alt='brand-portfolio-eight'
                       sizes="100vw"
                       className="w-100 h-auto" />
                   </div>
@@ -2253,9 +2259,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
-
-
             </OwlCarousel>
 
 
@@ -2288,6 +2291,7 @@ export default function Home() {
               >
                 <Image src={home.foamingImage.src} width="0"
                   height="0"
+                  alt='foamingImage'
                   sizes="100vw"
                   className="w-100 h-auto" />
               </div>
@@ -2308,7 +2312,6 @@ export default function Home() {
                   method="POST"
                   noValidate="novalidate"
                 >
-                  {/* Custom Fields */}
                   <input
                     type="hidden"
                     name="url"
