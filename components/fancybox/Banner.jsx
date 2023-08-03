@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
+
 const Banner = () => {
     useEffect(() => {
-       
+        var TweenLite = require('https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js?ver=5.3.2  ');
         require('../../js/revolution.tools.min.js');
         require('../../js/revolution.extension.min.js');
         require('../../js/revoulation.js');
